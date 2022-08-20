@@ -1,0 +1,14 @@
+package hello;
+
+public class sad {
+
+	public static void main(String[] args) {
+		
+		System.out.printf("%4.1fyd = %5.1fcm\n",2.1,192.0);
+		System.out.printf("%4.1fyd = %5.1fcm",10.5,26.7);
+                     (자릿수 채우기. 소수점)
+		
+			}
+
+}
+	
