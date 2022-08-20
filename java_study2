@@ -1,0 +1,9 @@
+package hello;
+
+public class sad {
+
+	public static void main(String[] args) {
+		   
+		System.out.printf("%15s%15s%15s", "Seoul", "10,312,545", "+91,375");
+	 }
+}
