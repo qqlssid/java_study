@@ -1,0 +1,26 @@
+package hello;
+
+import java.util.*;
+public class sad {
+
+	public static void main(String[] args) {
+		
+		double a;
+		
+		Scanner sc=new Scanner(System.in);
+
+		System.out.print("yard? ");
+		a = sc.nextDouble();
+		
+		double cm;
+		
+		cm= a*91.44;
+	    
+		
+		System.out.printf("%.1f%s%.1f%s",a,"yard = ",cm,"cm");
+		
+		
+
+			}
+
+}
