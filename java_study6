@@ -1,0 +1,23 @@
+package hello;
+
+import java.util.*;
+public class sad {
+
+	public static void main(String[] args) {
+		
+		double a,b;
+		String x;
+		
+		Scanner sc = new Scanner(System.in);
+	    a = sc.nextDouble();
+	    b = sc.nextDouble();
+	    sc.nextLine();      <<<인식이 안되어 단어가 안들어가질 수 있기에 넣어야함
+	    x = sc.nextLine();
+	    
+		System.out.printf("%.2f\n", a);
+		System.out.printf("%.2f\n", b);
+		System.out.println(x);
+			
+			}
+
+}
