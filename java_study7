@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main{
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		double a,b,sum;<<실수형 
+		
+		a=50;
+		b=100.12;<<정수형
+		
+		sum= a * b;
+		System.out.printf("%.2f * %d = %d",b,(int)a,(int)sum);<<실수형이기에 (int)를 넣어 강제 변환해줌
+		
+
+			}
+
+}
