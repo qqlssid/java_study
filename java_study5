@@ -1,0 +1,29 @@
+package hello;
+
+import java.util.*;
+public class sad {
+
+	public static void main(String[] args) {
+		
+		int a,b;
+		Scanner sc = new Scanner(System.in);
+		
+		
+		a = sc.nextInt();		
+		b = sc.nextInt();
+		
+		int x, y;
+		
+		x= a*b;
+		y= a/b;
+		
+		
+		System.out.println(a + " * " + b + " = " + x);
+		System.out.println(a + " / " + b + " = " + y);
+		
+		
+		
+		
+			}
+
+}
