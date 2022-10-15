@@ -6,11 +6,11 @@ public class Main {
 		 int x=sc.nextInt();
 		 int y=sc.nextInt();
 
-		 if(y<x) {                //y는 x보다 작다
+		 if(y<=x) {                //y는 x보다 작다
 			 for(int i=y; i<=x; i++)     //변수는 y이며, 변수는 x보다 작거나 같고, 수는 1씩 증가한다
 			 System.out.print(i+" ");}
 		 
-		 else if(y>x) {
+		 else if(y>=x) {
 			 for(int i=x; i<=y; i++)
 			 System.out.print(i+" ");
 		 
