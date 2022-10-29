@@ -1,0 +1,120 @@
+1. 아래 출력이 가능한 1개 클래스를 메서드(함수)기반으로 작성한다. (단, 이름은 본인 이름이 나오도록 변경하시오.)
+출력예)
+------------
+홍길동
+45세
+000-0000-0000
+------------
+성춘향
+100세
+111-1111-1111
+------------
+각시탈
+3세
+222-2222-2222
+
+
+위 1번에서 작업한 데이터 변경 setter소스 붙여 넣기 시작(아래)
+
+
+
+2. 위 1개 클래스를  3개의 클래스로 분리한다.(아래)
+
+MainControler(main함수), MemberVO(String name,int age,String phoneNum필드), MemberService(printMembers매서드)
+
+각 클래스정보: 여러명의 회원 정보(MemberVO)를 전달받고(MainControler), 출력(MemberService)하는 메소드 선언하기. 이클립스의 소스를 붙여 넣으시오.
+
+위2번 작업한 클래스 3개 소스 붙여 넣기 시작(아래)
+
+
+3. 작업 시 발생한 오류메시지 1가지 이상과 해결사항을 기록하고 정상실행결과를 이미지로 캡쳐 해서 붙여 넣는다..
+
+위 3번 발생한 오류메시지 1가지 이상과 해결사항을 붙여 넣기 시작(아래)
+정상 실행 결과 갭쳐(아래)
+
+//오류 메시지 The method setName(String) is undefined for the type MemberVO
+		>>void java_study.MemberVO.setName(String string)
+
+
+
+※ MemberVO.java, MemberService.java, MainController.java 내용 아래에 붙여 넣기
+
+import java.util.*;
+public class java04 {
+	public static void main(String[] args) {	
+		
+		MemberVO m1 = new MemberVO();
+		m1.setName("박정빈");
+		m1.setAge(45);
+		m1.setPhoneNum("010-0000-0000");
+
+		MemberVO m2 = new MemberVO();
+		m2.setName("박정빈");
+		m2.setAge(100);
+		m2.setPhoneNum("111-1111-1111");
+    
+		MemberVO m3 = new MemberVO();
+		m3.setName("박정빈");
+		m3.setAge(3);
+		m3.setPhoneNum("222-2222-2222");
+
+		MemberVO[] members = new MemberVO[3];//배열객체(스칼라값)
+		members[0] = m1;
+		members[1] = m2;
+		members[2] = m3;
+		
+		//학생:위 배열객체를 ArrayList 배열객체(벡터값)로 변경하시오.
+    
+		MemberService t = new MemberService();
+		t.printMembers(members);
+		//학생:위 printMembers 메서드를 오버로드기능으로 추가하시오.
+	}
+	
+}
+
+// 자료형 데이터 클래스(아래)
+class MemberVO {
+	private String name;
+	private int age;
+	private String phoneNum;
+	
+	public void setName(String Name) 
+	{
+			name = Name;
+	}
+	void setAge(int Age) 
+	{
+			age = Age;
+	}
+	void setPhoneNum(String Phone) 
+	{
+			phoneNum = Phone;
+	}
+	//학생: Getter, Setter 메서드 생성(아래)
+	String getName()
+	{
+		return name;
+	}
+	int getAge()
+	{
+		return age;
+	}
+	String getPhoneNum()
+	{
+		return phoneNum;
+	}
+}
+//서비스 클래스 - 출력용 메서드 작성(아래)
+class MemberService {
+	
+	public void printMembers(MemberVO[] members) {
+		for (MemberVO m : members) {
+			System.out.println("------------");
+			//학생: 출력 메서드 사용(아래)
+			System.out.println(m.getName());
+			System.out.println(m.getAge()+"세");
+			System.out.println(m.getPhoneNum());
+			System.out.println("------------");
+				}
+ 	}
+}
